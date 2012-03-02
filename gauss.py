@@ -1,13 +1,13 @@
-from checker import check
 from copy import deepcopy
-from numpy import inf
+from numpy import shape, inf
+from utils import checkSize
 
-def gauss(a, b, eps = 1e-10):
+def gauss(a, b, eps = 0):
   a = deepcopy(a)
   b = deepcopy(b)
-  if not check(a, b):
-    raise Exception("Invalid matrix")
-  n = len(b)  
+  if not checkSize(a, b):
+    raise Exception("Invalid operands")
+  n = len(b)
   for i in range(n):
     for j in range(i, n):
       if abs(a[i, j]) > eps:
@@ -24,9 +24,9 @@ def gauss(a, b, eps = 1e-10):
             a[k, i] = 0
         break
   for i in range(n):
-    if abs(a[i, i]) < eps and abs(b[i]) > eps:
+    if abs(a[i, i]) <= eps and abs(b[i]) > eps:
       return 0, None
   for i in range(n):
-    if abs(a[i, i]) < eps:
+    if abs(a[i, i]) <= eps:
       return inf, None
   return 1, [b[i] / a[i, i] for i in range(n)]

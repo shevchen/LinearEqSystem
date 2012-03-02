@@ -1,4 +1,4 @@
-from numpy import matrix
+from numpy import matrix, shape
 
 def wellConditioned(n):
   m = matrix([[0.] * n] * n)
@@ -14,5 +14,11 @@ def illConditioned(n):
       m[i, j] = 1. / (i + j + 1)
   return m
 
-def column(n):
+def freeTerm(n):
   return [i for i in range(n)]
+
+def checkSize(a, b):
+  aShape = shape(a)
+  if len(aShape) != 2 or aShape[0] != aShape[1]:
+    return False
+  return aShape[0] == len(b)
