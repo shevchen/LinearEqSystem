@@ -1,6 +1,9 @@
 from checker import check
+from copy import deepcopy
 
 def gauss(a, b, eps = 1e-10):
+  a = deepcopy(a)
+  b = deepcopy(b)
   if not check(a, b):
     raise Exception("Invalid matrix")
   n = len(b)  
