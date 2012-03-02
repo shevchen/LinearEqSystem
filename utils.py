@@ -15,10 +15,13 @@ def illConditioned(n):
   return m
 
 def freeTerm(n):
-  return [i for i in range(n)]
+  return matrix([[1. * i] for i in range(n)])
 
 def checkSize(a, b):
   aShape = shape(a)
   if len(aShape) != 2 or aShape[0] != aShape[1]:
     return False
-  return aShape[0] == len(b)
+  bShape = shape(b)
+  if len(bShape) != 2 or bShape[1] != 1:
+    return False
+  return aShape[0] == bShape[0]
