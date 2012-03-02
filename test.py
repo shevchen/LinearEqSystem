@@ -2,10 +2,10 @@ from numpy import *
 from utils import *
 from gauss import *
 
-n = 5 
+n = 10 
 a = wellConditioned(n)
 b = freeTerm(n)
 print a
 print b
 print gauss(a, b)
-print a * transpose(matrix(b))
+print linalg.solve(a, b)
