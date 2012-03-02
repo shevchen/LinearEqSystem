@@ -5,7 +5,7 @@ from generator import *
 def gauss(a, b, eps = 1e-10):
   if not check(a, b):
     raise Exception("Invalid matrix")
-  n = shape(a)[0]  
+  n = len(b)  
   for i in range(n):
     for j in range(i, n):
       if abs(a[i, j]) > eps:
