@@ -1,6 +1,4 @@
 from checker import check
-from numpy import matrix, shape
-from generator import *
 
 def gauss(a, b, eps = 1e-10):
   if not check(a, b):
@@ -28,8 +26,3 @@ def gauss(a, b, eps = 1e-10):
     if abs(a[i, i]) < eps:
       return float("infinity"), None
   return 1, [b[i] / a[i, i] for i in range(n)]
-
-n = 5
-a = wellConditioned(n)
-b = column(n)
-print gauss(a, b)
