@@ -1,5 +1,6 @@
 from checker import check
 from copy import deepcopy
+from numpy import inf
 
 def gauss(a, b, eps = 1e-10):
   a = deepcopy(a)
@@ -27,5 +28,5 @@ def gauss(a, b, eps = 1e-10):
       return 0, None
   for i in range(n):
     if abs(a[i, i]) < eps:
-      return float("infinity"), None
+      return inf, None
   return 1, [b[i] / a[i, i] for i in range(n)]
