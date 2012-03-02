@@ -13,15 +13,12 @@ def gauss(a, b, eps = 0):
       if abs(a[i, j]) > eps:
         a[i], a[j] = a[j], a[i]
         b[i], b[j] = b[j], b[i]
-        for k in range(i + 1, n):
-          a[i, k] /= a[i, i]
         b[i] /= a[i, i]
-        a[i, i] = 1
+        a[i] /= a[i, i]
         for k in range(n):
           if k != i:
-            for l in range(i + 1, n):
-              a[k, l] -= a[k, i] * a[i, l]
-            a[k, i] = 0
+            b[k] -= a[k, i] * b[i]
+            a[k] -= a[k, i] * a[i]
         break
   for i in range(n):
     if abs(a[i, i]) <= eps and abs(b[i]) > eps:
