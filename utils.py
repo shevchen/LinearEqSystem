@@ -25,3 +25,6 @@ def checkSize(a, b):
   if len(bShape) != 2 or bShape[1] != 1:
     return False
   return aShape[0] == bShape[0]
+
+def zeroTerm(n):
+  return matrix([[0.]] * n)
