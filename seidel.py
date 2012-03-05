@@ -3,7 +3,7 @@ from copy import deepcopy
 from numpy import matrix, shape
 from numpy.linalg import norm
 
-def seidel(a, b, eps = 1e-10, coeff = 1.):
+def seidel(a, b, coeff = 1., eps = 1e-10):
   if not checkSize(a, b):
     raise Exception("Invalid operands")
   a = deepcopy(a)

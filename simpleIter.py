@@ -15,7 +15,6 @@ def simpleIter(a, b, eps = 1e-10):
   iters = 0
   while norm(xOld - x) > eps:
     iters += 1
-    #print x 
     xOld = x
     x = a * x - b
   print "Iterations in simple iterations method:", iters
