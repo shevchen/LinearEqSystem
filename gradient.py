@@ -18,7 +18,7 @@ def launchGradient(a, b, eps = 1e-10, limit = 1000):
   plot(it, [eps] * len(it), 'r', linewidth = 1.0)
   xlabel('Iteration')
   ylabel('||dr||')
-  title('Conjugate gradient method)
+  title('Conjugate gradient method')
   grid(True)
   show()
 
