@@ -9,7 +9,7 @@ n = 10
 a = wellConditioned(n)
 b = freeTerm(n)
 print "Norm of the matrix + E:", norm(a + identityMatrix(n))
-print "Condition number of the matrix", norm(a) * norm(a.getI())
+print "Condition number of the matrix:", norm(a) * norm(a.getI())
 print "Gauss"
 print gauss(a, b)
 for i in range(9):
