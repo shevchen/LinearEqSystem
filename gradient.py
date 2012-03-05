@@ -2,8 +2,27 @@ from copy import copy, deepcopy
 from numpy import matrix, shape, inf
 from utils import checkSize, zeroTerm
 from numpy.linalg import norm
+from pylab import *
 
-def grad(a, b, eps = 1e-10, limit = 1000):
+it = []
+norms = []
+
+def launchGradient(a, b, eps = 1e-10, limit = 1000):
+  x = gradient(a, b, eps, limit)
+  if x is None:
+    print 'The conjugate gradient method has failed.'
+    return
+  print x
+  print "Iterations in conjugate gradient method:", len(it)
+  plot(it, norms, 'b', linewidth = 2.0)
+  plot(it, [eps] * len(it), 'r', linewidth = 1.0)
+  xlabel('Iteration')
+  ylabel('||dr||')
+  title('Conjugate gradient method)
+  grid(True)
+  show()
+
+def gradient(a, b, eps = 1e-10, limit = 1000):
     a = deepcopy(a)
     b = deepcopy(b)
     if not checkSize(a, b):
@@ -29,8 +48,9 @@ def grad(a, b, eps = 1e-10, limit = 1000):
         p1 = r1 + beta * p1
         p2 = r2 + beta * p2
         iters += 1
-        if iters >= limit or norm(r1) > maxNorm:
-            print "Gradients method has not succeeded."
+        curNorm = norm(r1)
+        if iters >= limit or curNorm > maxNorm:
             return None
-    print "Iterations in gradients method:", iters
+        it.append(iters)
+        norms.append(curNorm)
     return x
