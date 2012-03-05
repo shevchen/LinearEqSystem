@@ -1,6 +1,6 @@
 from copy import copy, deepcopy
 from numpy import matrix, shape, inf, zeros, nonzero
-from utils import checkSize
+from utils import checkSize, identityMatrix
 from numpy.linalg import norm
 
 def iteration(a, b, appr, eps = 0):
