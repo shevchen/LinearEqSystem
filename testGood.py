@@ -8,15 +8,15 @@ from simpleIter import *
 n = 10 
 a = wellConditioned(n)
 b = freeTerm(n)
-#print "Norm of the matrix + E:", norm(a + identityMatrix(n))
-#print "Condition number of the matrix", norm(a) * norm(a.getI())
-#print "Gauss"
-#print gauss(a, b)
+print "Norm of the matrix + E:", norm(a + identityMatrix(n))
+print "Condition number of the matrix", norm(a) * norm(a.getI())
+print "Gauss"
+print gauss(a, b)
 for i in range(9):
   coeff = 0.2 * (i + 1)
   print "Seidel, coeff =", coeff
   print seidel(a, b, coeff)
-#print "Simple iterations method"
-#print simpleIter(a, b)
-#print "Correct"
-#print linalg.solve(a, b)
+print "Simple iterations method"
+print simpleIter(a, b)
+print "Correct"
+print linalg.solve(a, b)
