@@ -1,6 +1,6 @@
 from copy import copy, deepcopy
 from numpy import matrix, shape, inf, zeros, nonzero
-from utils import checkSize, identityMatrix
+from utils import *
 from numpy.linalg import norm
 
 def iteration(a, b, appr, eps = 0):
@@ -10,9 +10,9 @@ def iteration(a, b, appr, eps = 0):
 	if not checkSize(a, b):
 		raise Exception("Invalid operands")
 	if not checkSize(a, appr):
-		raise Exception("Invalid operands")
+		raise Exception("Invalid operands, wrong size of approximation")
 	if eps == 0:
-		eps = abs(a[a.nonzero()]).min()/100
+		raise Exception("Invalid operands, eps should be not != 0")
 	n = shape(a)[0]
 	a += identityMatrix(n)
 	appr_old = matrix([[inf]] * n)
