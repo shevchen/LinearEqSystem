@@ -1,16 +1,16 @@
 Norm of the matrix + E: 4.17787244492
-Condition number of the matrix 1.63318183925e+13
+Condition number of the matrix: 1.63318183925e+13
 Gauss
-(1, matrix([[ -9.89756207e+02],
-        [  9.69988779e+04],
-        [ -2.30426925e+06],
-        [  2.30589365e+07],
-        [ -1.19800107e+08],
-        [  3.55621415e+08],
-        [ -6.25496463e+08],
-        [  6.44032196e+08],
-        [ -3.58333082e+08],
-        [  8.31303143e+07]]))
+[[ -9.89756207e+02]
+ [  9.69988779e+04]
+ [ -2.30426925e+06]
+ [  2.30589365e+07]
+ [ -1.19800107e+08]
+ [  3.55621415e+08]
+ [ -6.25496463e+08]
+ [  6.44032196e+08]
+ [ -3.58333082e+08]
+ [  8.31303143e+07]]
 Seidel, coeff = 0.2
 Seidel method has not succeeded.
 None
@@ -39,17 +39,8 @@ Seidel, coeff = 1.8
 Seidel method has not succeeded.
 None
 Simple iterations method
-Iterations in simple iterations method: 702
-[[-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]
- [-inf]]
+Simple iterations method has not succeeded.
+None
 Correct
 [[ -9.89775359e+02]
  [  9.70006242e+04]

@@ -11,7 +11,7 @@ b = freeTerm(n)
 print "Norm of the matrix + E:", norm(a + identityMatrix(n))
 print "Condition number of the matrix:", norm(a) * norm(a.getI())
 print "Gauss"
-print gauss(a, b)
+print gauss(a, b)[1]
 for i in range(9):
   coeff = 0.2 * (i + 1)
   print "Seidel, coeff =", coeff
