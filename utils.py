@@ -4,7 +4,8 @@ def wellConditioned(n):
   m = matrix([[0.] * n] * n)
   for i in range(n):
     for j in range(n):
-      m[i, j] = (-0.5) ** abs(j - i) 
+      m[i, j] = (-0.5) ** abs(j - i) / n
+    m[i, i] = -1.
   return m
 
 def illConditioned(n):
@@ -12,6 +13,12 @@ def illConditioned(n):
   for i in range(n):
     for j in range(n):
       m[i, j] = 1. / (i + j + 1)
+  return m
+
+def identityMatrix(n):
+  m = matrix([[0.] * n] * n)
+  for i in range(n):
+    m[i, i] = 1
   return m
 
 def freeTerm(n):
