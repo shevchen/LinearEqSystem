@@ -41,6 +41,18 @@ None
 Simple iterations method
 Simple iterations method has not succeeded.
 None
+Gradients method
+Iterations in gradients method: 89
+[[ -9.89872624e+02]
+ [  9.70088709e+04]
+ [ -2.30448110e+06]
+ [  2.30608556e+07]
+ [ -1.19809235e+08]
+ [  3.55646450e+08]
+ [ -6.25537458e+08]
+ [  6.44071747e+08]
+ [ -3.58353816e+08]
+ [  8.31348682e+07]]
 Correct
 [[ -9.89775359e+02]
  [  9.70006242e+04]
