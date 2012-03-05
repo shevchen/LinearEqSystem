@@ -6,7 +6,7 @@ from seidel import *
 from simpleIter import *
 
 n = 10 
-a = illConditioned(n)
+a = wellConditioned(n)
 b = freeTerm(n)
 print "Norm of the matrix + E:", norm(a + identityMatrix(n))
 print "Condition number of the matrix:", norm(a) * norm(a.getI())
