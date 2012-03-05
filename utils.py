@@ -12,7 +12,8 @@ def illConditioned(n):
   m = matrix([[0.] * n] * n)
   for i in range(n):
     for j in range(n):
-      m[i, j] = 1. / (i + j + 1)
+      m[i, j] = 1. / (i + j + 1) / n
+    m[i, i] = -1.
   return m
 
 def identityMatrix(n):
