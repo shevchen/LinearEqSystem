@@ -7,7 +7,7 @@ from simpleIter import *
 from gradient import *
 
 n = 10
-a = wellConditioned(n)
+a = illConditioned(n)
 b = freeTerm(n)
 launchSeidel(a, b)
 #launchSimpleIter(a, b)

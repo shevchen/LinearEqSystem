@@ -12,9 +12,9 @@ def launchSimpleIter(a, b, eps = 1e-10, limit = 1000):
   x = simpleIter(a, b, eps, limit)
   if x is None:
     print 'The simple iteration method has failed.'
-    return
-  print x
-  print "Iterations in simple iteration method:", len(it)
+  else:
+    print x
+    print "Iterations in simple iteration method:", len(it)
   plot(it, norms, 'b', linewidth = 2.0)
   plot(it, [eps] * len(it), 'r', linewidth = 1.0)
   xlabel('Iteration')
